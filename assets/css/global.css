@@ -1,0 +1,114 @@
+/*
+==============================
+*   Globbal styles only!
+*   Buttons, forms, inputs, etc.
+*   Not single/multiple page/pages styles. 
+==============================
+*/
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;600&family=Roboto:wght@100;400;500&display=swap");
+
+*,
+::before,
+::after {
+    /* Additional default web browser styles reset */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Primary Color */
+    --primary-100: #d6f3e8;
+    --primary-200: #ade7d1;
+    --primary-300: #83dcbb;
+    --primary-400: #5ad0a4;
+    --primary-500: #31c48d; /* Default Primary Color */
+    --primary-600: #269e72;
+    --primary-700: #1d7655;
+    --primary-800: #144e38;
+    --primary-900: #0a271c;
+
+    /* Gray Colors */
+    --gray-50: #fafafa;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    
+    /* Additional Colors */
+    --white: #fff;
+    --white-mid: #e7e7e7;
+    --white-bone: #f9f6ee;
+
+    --black: #0d0d0d;
+    --black-mid: #222222;
+    --black-light: #333333;
+
+    --red-light: #f8d7da;
+    --red-mid: #f24646;
+    --red-dark: #842029;
+
+    --green-light: #d1e7dd;
+    --green-mid: #90ee90;
+    --green-dark: #0f5132;
+
+    --yellow-light: #fff8e5;
+    --yellow-mid: #ffc107;
+    --yellow-dark: #856404;
+
+    --blue-light: #cce5ff;
+    --blue-mid: #0d6efd;
+    --blue-dark: #004085;
+
+    --orange: #fd7e14;
+    --pink: #d63384;
+    --purple: #6f42c1;
+
+    /* Shadows */
+    --shadow-low: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-norm: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-mid: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-high: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    /* Gradients */
+    --gradient-opacity: 0.013;
+
+    /* Text Styles */
+    --ff-heading: "Roboto Slab", serif;
+    --ff-body: "Roboto", sans-serif;
+    --smallText: 0.7em;
+    --color-bg: var(--gray-100);
+    --color-txt: var(--gray-900);
+
+    --letter-spacing: 2px;
+    --line-height: 1.5;
+
+    /* Border Styles */
+    --radius-circle: 50%;
+    --half-circle-radius: 3.125rem;
+    --regular-radius: 0.25rem;
+
+    /* Animations / Transitions / Scales */
+    --transition-slow: 0.6s ease-in-out all;
+    --transition-mid: 0.3s ease-in-out all;
+    --transition-fast: 0.1s ease-in-out all;
+
+    --scale: 1.02;
+
+    /* Div Styles */
+    --max-width: 1120px;
+    --section-width: 500px;
+}
+
+html{
+    /* Convert default 1rem = 16px to 1rem = 10px */
+    font-size: 100%;
+}
