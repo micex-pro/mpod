@@ -460,9 +460,9 @@ li {
   text-transform: capitalize;
   letter-spacing: var(--letter-spacing);
   position: absolute;
-  left: 0.5rem;
+  left: 0.9rem;
+  top: -0.1rem;
   transition: 0.2s ease-in-out top;
-  padding: 0 0.5rem;
   pointer-events: none;
   /* border-top: 4px solid var(--primary-50); */
 }
@@ -496,12 +496,23 @@ li {
   border-bottom: 5px solid var(--color-bg);
 }
 
-.test {
+.input-line {
   height: 2px;
-  background: var(--primary-50);
+  background: red;
+  width: 5.5rem;
+  margin-left: 0.5rem;
+  z-index: 100;
   position: absolute;
-  top: -0.1rem;
 }
+
+/* 
+  * To calculate the center of the line you need to calculate the length of the label:
+    * the label should have a font-size of 0.7em and a letter-spacing of 0.1rem.
+    * To calculate the width of the label, we need to take into account the font-size, letter-spacing, and the length of the label text. Assuming the font family is consistent, * we can estimate an average width of each character to be around 0.5em.
+    * So the width of the label with the text "username *" would be:
+    * (8 characters * 0.5em) + (0.1rem * 7) = 4em + 0.7rem = 4.7rem\
+  * If the input-line has a width of 5.5 rem than the center should be (5.5 - 4.7)/2 = (0.8)/2 = 0.4. so the start position of the label should start at left: 0.4rem. 
+*/
 
 /* End Of Form */
 
