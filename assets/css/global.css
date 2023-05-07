@@ -461,10 +461,10 @@ li {
   letter-spacing: var(--letter-spacing);
   position: absolute;
   left: 0.9rem;
-  top: -0.1rem;
+  top: -0.7rem;
   transition: 0.2s ease-in-out top;
   pointer-events: none;
-  /* border-top: 4px solid var(--primary-50); */
+  z-index: 100;
 }
 
 .modern-input {
@@ -474,6 +474,7 @@ li {
   border: 2px solid var(--primary-200);
   background-color: var(--color-bg);
   transition: var(--transition-2);
+  margin-bottom: 1rem;
 }
 
 .modern-input:focus {
@@ -489,19 +490,25 @@ li {
   top: -1.25rem;
   border-top: none;
   border-bottom: 5px solid var(--color-bg);
+  color: var(--primary-600);
 }
 .modern-input:focus + .modern-label {
   top: -1.25rem;
   border-top: none;
   border-bottom: 5px solid var(--color-bg);
+  color: var(--primary-600);
+}
+
+.modern-input:valid {
+  border: 2px solid var(--primary-500) !important;
 }
 
 .input-line {
   height: 2px;
-  background: red;
+  background: var(--primary-50);
   width: 5.5rem;
   margin-left: 0.5rem;
-  z-index: 100;
+  z-index: 50;
   position: absolute;
 }
 
