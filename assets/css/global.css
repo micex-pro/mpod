@@ -342,6 +342,8 @@ li {
 
 .btn-block {
   width: 100%;
+  /* Remove the line bellow if needed. I makes the element go full width in a grid template */
+  grid-column: 1 / -1;
 }
 /* End Of Buttons */
 /* Start Of Alerts */
@@ -378,6 +380,8 @@ li {
   background: var(--blue-light);
   color: var(--blue-dark);
   border-color: rgb(184, 218, 255);
+  /* Remove the line bellow if needed. I makes the element go full width in a grid template */
+  grid-column: 1 / -1;
 }
 /* End Of Alerts */
 /* Start Of Form */
