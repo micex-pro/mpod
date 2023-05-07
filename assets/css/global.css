@@ -380,8 +380,6 @@ li {
   background: var(--blue-light);
   color: var(--blue-dark);
   border-color: rgb(184, 218, 255);
-  /* Remove the line bellow if needed. I makes the element go full width in a grid template */
-  grid-column: 1 / -1;
 }
 /* End Of Alerts */
 /* Start Of Form */
@@ -577,6 +575,11 @@ li {
   .anchors-section .section-content {
     grid-template-columns: repeat(3, 1fr);
     gap: 0 1.5rem;
+  }
+
+  .alert-info {
+    /* Remove the line bellow if needed. I makes the element go full width in a grid template */
+    grid-column: 1 / -1;
   }
 }
 
