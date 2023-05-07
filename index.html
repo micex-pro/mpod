@@ -103,9 +103,9 @@
       <h1 class="section-title">anchors</h1>
       <div class="title-underline"></div>
       <div class="section-content">
-        <a href="#nav" id="nav">scroll to top</a>
-        <a href="https://www.micex.pro/" id="link">Just a link</a>
-        <a href="#footer" id="footer">scroll to bottom</a>
+        <a href="#nav" class="link">scroll to top</a>
+        <a href="https://www.micex.pro/" class="nav-anchor">Just a link</a>
+        <a href="#footer" class="footer-anchor">scroll to bottom</a>
       </div>
     </section>
     <!-- End Of Anchors -->
@@ -218,6 +218,17 @@
               placeholder="Default Value"
             ></textarea>
           </div>
+          <div class="form-row">
+            <label class="form-switch">
+              <input id="form-rcondition" type="checkbox" name="rcondition" />
+              <span class="slider"></span>
+            </label>
+            <label for="form-rcondition" class="form-label condition-label"
+              >Accept <a href="#" class="link">TOS</a> /
+              <a href="#" class="link">Privacy</a> /
+              <a href="#" class="link">other</a></label
+            >
+          </div>
           <button type="submit" class="btn btn-block">create account</button>
           <small class="form-alert-error">bad request</small>
         </form>
@@ -244,6 +255,12 @@
               required
             />
             <label for="password" class="modern-label">Password *</label>
+          </div>
+          <div class="form-row">
+            <label class="form-switch">
+              <input type="checkbox" name="lcondition" />
+              <span class="slider round"></span>
+            </label>
           </div>
           <button type="submit" class="btn btn-block">login</button>
           <small class="form-alert-success">Welcome back !</small>

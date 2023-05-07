@@ -102,8 +102,6 @@
   --transition-2: 0.2s ease-in-out all;
   --transition-1: 0.1s ease-in-out all;
 
-  --scale: 1.02;
-
   /* Div Styles */
   --width-max: 1120px;
   --width-section: 550px;
@@ -223,21 +221,16 @@ a {
   margin-bottom: 1rem;
 }
 
-#nav:hover {
+.nav-anchor:hover {
   color: var(--primary-500);
 }
 
-#link:hover {
-  color: var(--primary-500);
-  transform: scale(1.1);
-}
-
-#link:hover {
+.link:hover {
   color: var(--primary-500);
   transform: scale(1.1);
 }
 
-#footer:hover {
+.footer-anchor:hover {
   color: var(--primary-500);
   padding-left: 3rem;
   text-shadow: 0 4px 6px -1px rgb(49 196 141 / 0.1),
@@ -535,6 +528,85 @@ li {
     * (8 characters * 0.5em) + (0.1rem * 7) = 4em + 0.7rem = 4.7rem\
   * If the input-line has a width of 5.5 rem than the center should be (5.5 - 4.7)/2 = (0.8)/2 = 0.4. so the start position of the label should start at left: 0.4rem. 
 */
+
+.form-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  transition: var(--transition-2);
+  float: left;
+  margin-bottom: 1rem;
+}
+
+.form-switch:hover {
+  transform: scale(1.02);
+}
+
+.form-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gray-200);
+  transition: var(--transition-2);
+}
+
+.slider:hover {
+  background-color: var(--primary-200);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: var(--transition-2);
+}
+
+input:checked + .slider {
+  background-color: var(--primary-400);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--gray-200);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  box-shadow: 0 0 1px var(--primary-400);
+}
+
+.round {
+  border-radius: 34px;
+}
+
+.condition-label {
+  display: inline;
+  margin: 0;
+  float: left;
+  margin-left: 1rem;
+  margin-top: 8.5px;
+}
+
+.condition-label .link {
+  font-size: var(--smallText);
+}
+
+.slider.round:before {
+  border-radius: var(--radius-circle);
+}
 
 /* End Of Form */
 
