@@ -430,8 +430,14 @@ li {
   transition: var(--transition-2);
 }
 
-.form-input:focus {
+.form-input:focus,
+.form-textarea:focus {
   outline: none;
+  border: 2px solid var(--primary-500) !important;
+}
+
+.form-input:valid,
+.form-textarea:valid {
   border: 2px solid var(--primary-500) !important;
 }
 
@@ -446,8 +452,15 @@ li {
   text-transform: capitalize;
 }
 
-.form-alert {
+.form-alert-error {
   color: var(--red-dark);
+  letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
+  transition: var(--transition-2);
+}
+
+.form-alert-success {
+  color: var(--green-dark);
   letter-spacing: var(--letter-spacing);
   text-transform: capitalize;
   transition: var(--transition-2);

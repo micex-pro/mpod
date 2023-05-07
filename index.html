@@ -204,12 +204,15 @@
           </div>
           <div class="form-row">
             <label for="goals" class="form-label">Goals</label>
-            <textarea name="rgoals" id="goals" class="form-textarea">
-Default Value</textarea
-            >
+            <textarea
+              name="rgoals"
+              id="goals"
+              class="form-textarea"
+              placeholder="Default Value"
+            ></textarea>
           </div>
           <button type="submit" class="btn btn-block">create account</button>
-          <small class="form-alert">bad request</small>
+          <small class="form-alert-error">bad request</small>
         </form>
         <form action="#login" class="form" id="lform">
           <h4>login</h4>
@@ -236,7 +239,7 @@ Default Value</textarea
             <label for="password" class="modern-label">Password *</label>
           </div>
           <button type="submit" class="btn btn-block">login</button>
-          <small class="form-alert">Wrong username or password</small>
+          <small class="form-alert-success">Welcome back !</small>
         </form>
       </div>
     </section>
