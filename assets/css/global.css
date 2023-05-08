@@ -491,19 +491,13 @@ li {
 }
 .modern-input:hover + .modern-label {
   top: -1.25rem;
-  border-top: none;
-  border-bottom: 5px solid var(--color-bg);
 }
 .modern-input:valid + .modern-label {
   top: -1.25rem;
-  border-top: none;
-  border-bottom: 5px solid var(--color-bg);
   color: var(--primary-600);
 }
 .modern-input:focus + .modern-label {
   top: -1.25rem;
-  border-top: none;
-  border-bottom: 5px solid var(--color-bg);
   color: var(--primary-600);
 }
 
@@ -529,6 +523,24 @@ li {
   * If the input-line has a width of 5.5 rem than the center should be (5.5 - 4.7)/2 = (0.8)/2 = 0.4. so the start position of the label should start at left: 0.4rem. 
 */
 
+.form-snewsletter{
+  display: flex;
+  justify-content: center;
+}
+
+.input-line-center{
+  margin: 0;
+  width: 3.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-line-center .modern-label{
+  position: initial;
+  margin: 0;
+  text-align: center;
+}
+
 .form-switch {
   position: relative;
   display: inline-block;
@@ -536,7 +548,6 @@ li {
   height: 24px;
   transition: var(--transition-2);
   float: left;
-  margin-bottom: 1rem;
 }
 
 .form-switch:hover {
@@ -595,18 +606,29 @@ input:checked + .slider:before {
 .condition-label {
   display: inline;
   margin: 0;
-  float: left;
-  margin-left: 1rem;
-  margin-top: 8.5px;
+  font-size: 0.7rem;
 }
 
 .condition-label .link {
-  font-size: var(--smallText);
+  font-size: 0.7rem;
 }
 
 .slider.round:before {
   border-radius: var(--radius-circle);
 }
+
+.form-row-condition{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.forgot-credentials{
+  justify-content: center;
+}
+
+
 
 /* End Of Form */
 

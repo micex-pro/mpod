@@ -218,7 +218,7 @@
               placeholder="Default Value"
             ></textarea>
           </div>
-          <div class="form-row">
+          <div class="form-row form-row-condition">
             <label class="form-switch">
               <input id="form-rcondition" type="checkbox" name="rcondition" />
               <span class="slider"></span>
@@ -228,6 +228,13 @@
               <a href="#" class="link">Privacy</a> /
               <a href="#" class="link">other</a></label
             >
+          </div>
+          <div class="form-row form-row-condition">
+            <label class="form-switch">
+              <input id="form-rnewsletter" type="checkbox" name="rnewsletter" />
+              <span class="slider"></span>
+            </label>
+            <label for="form-rnewsletter" class="form-label condition-label">join our newsletter</label> 
           </div>
           <button type="submit" class="btn btn-block">create account</button>
           <small class="form-alert-error">bad request</small>
@@ -256,14 +263,36 @@
             />
             <label for="password" class="modern-label">Password *</label>
           </div>
-          <div class="form-row">
+          <div class="form-row form-row-condition">
             <label class="form-switch">
-              <input type="checkbox" name="lcondition" />
+              <input id="form-lrememberpass" type="checkbox" name="lrememberpass" />
               <span class="slider round"></span>
             </label>
+            <label for="form-rnewsletter" class="form-label condition-label">Remember me</label> 
           </div>
           <button type="submit" class="btn btn-block">login</button>
-          <small class="form-alert-success">Welcome back !</small>
+          <div class="form-row form-row-condition forgot-credentials">
+            <label class="form-label condition-label"
+            >Forgot <a href="#" class="link">username</a> /
+            <a href="#" class="link">password</a>
+          </div>
+          <small class="form-alert-success">Welcome back!</small>
+        </form>
+        <form action="#sub-to-newsletter" class="form" id="sform">
+          <h4>newsletter</h4>
+          <div class="form-row form-snewsletter">
+            <div class="input-line input-line-center">
+              <label for="name" class="modern-label">E-mail *</label>
+            </div>
+            <input
+              type="email"
+              class="modern-input"
+              name="semail"
+              id="form-semail"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-block">Subsribe now</button>
         </form>
       </div>
     </section>
