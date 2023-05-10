@@ -16,5 +16,60 @@ window.addEventListener('load', function(){
             });
         }
     });
+
+    // check if confirmed password and password are the same value
+    var rpassword = document.getElementById("rpassword");
+    var rcpassword = document.getElementById("rcpassword");
+
+    rcpassword.addEventListener("keyup", function(event){
+        if (rcpassword.value != rpassword.value){
+            rpassword.style.borderColor = "var(--red-mid)";
+            rcpassword.style.borderColor = "var(--red-mid)";
+        }else{
+            rpassword.style.borderColor = "var(--primary-500)";
+            rcpassword.style.borderColor = "var(--primary-500)";
+        }
+    });
+
+    // Check for Caps Lock && send form on Enter key
+    var lpassword = document.getElementById("lpassword");
+    var capsLockWarning = document.getElementById("capslock-warning");
+
+    lpassword.addEventListener("keyup", function(event){
+        if (event.getModifierState("CapsLock")){
+            capsLockWarning.style.display = "block";
+        }else{
+            capsLockWarning.style.display = "none";
+        }
+
+        if (event.key === "Enter"){
+            event.preventDefault();
+            let submitBtn = document.querySelector("#lform button[type=submit]");
+            submitBtn.click();
+        }
+    });
+
+    // password visible / invisible button for inputs
+    var visible_btn = document.getElementById("form-visible-btn");
+    var invisible_btn = document.getElementById("form-invisible-btn");
+    var show_input = document.getElementById("lpassword");
+
+    visible_btn.addEventListener("click", function(){
+        visible_btn.classList.toggle("show");
+        visible_btn.classList.toggle("hide");
+        invisible_btn.classList.toggle("show");
+        invisible_btn.classList.toggle("hide");
+
+        show_input.type = "text";
+    });
+
+    invisible_btn.addEventListener("click", function(){
+        visible_btn.classList.toggle("show");
+        visible_btn.classList.toggle("hide");
+        invisible_btn.classList.toggle("show");
+        invisible_btn.classList.toggle("hide");
+
+        show_input.type = "password";
+    });
 });
 

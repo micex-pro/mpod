@@ -136,6 +136,15 @@ html::-webkit-scrollbar-track {
   border-radius: 10px;
 }
 /* End Of Custom Scroll Bar */
+/* Start hide / show */
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: inline-block !important;
+}
+/* End hide / show */
 /* Start Of Section */
 .section {
   max-width: var(--width-section);
@@ -330,7 +339,7 @@ li {
 }
 
 .btn-scaled:hover {
-  transform: scale(var(--scale));
+  transform: scale(1.05);
 }
 
 .btn-block {
@@ -426,14 +435,19 @@ li {
 }
 
 .form-input:focus,
-.form-textarea:focus {
+.form-textarea:focus, .modern-input:focus {
   outline: none;
-  border: 2px solid var(--primary-500) !important;
+  border: 2px solid var(--primary-500);
+  font-family: inherit;
+  letter-spacing: var(--letter-spacing);
 }
 
 .form-input:valid,
 .form-textarea:valid {
-  border: 2px solid var(--primary-500) !important;
+  outline: none;
+  border: 2px solid var(--primary-500);
+  letter-spacing: var(--letter-spacing);
+
 }
 
 .form-row {
@@ -445,6 +459,7 @@ li {
   font-family: inherit;
   color: var(--gray-400);
   text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
 }
 
 .form-alert-error {
@@ -485,10 +500,6 @@ li {
   margin-bottom: 1rem;
 }
 
-.modern-input:focus {
-  outline: none;
-  border: 2px solid var(--primary-500) !important;
-}
 .modern-input:hover + .modern-label {
   top: -1.25rem;
 }
@@ -502,7 +513,9 @@ li {
 }
 
 .modern-input:valid {
+  outline: none;
   border: 2px solid var(--primary-500) !important;
+  letter-spacing: var(--letter-spacing);
 }
 
 .input-line {
@@ -628,7 +641,31 @@ input:checked + .slider:before {
   justify-content: center;
 }
 
+#capslock-warning{
+  color: var(--red-dark);
+  display: none;
+}
 
+.form-password-visibility{
+  background: transparent;
+  border: none;
+  color: var(--black-mid);
+  box-shadow: none;
+  text-shadow: var(--shadow-2);
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 25%;
+  transform: translateY(-25%);
+}
+
+.form-password-visibility:hover{
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  text-shadow: var(--shadow-2);
+  color: var(--primary-500);
+}
 
 /* End Of Form */
 
@@ -674,6 +711,12 @@ input:checked + .slider:before {
   .alert-info {
     /* Remove the line bellow if needed. I makes the element go full width in a grid template */
     grid-column: 1 / -1;
+  }
+
+  .form-section .section-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 1.5rem;
   }
 }
 
