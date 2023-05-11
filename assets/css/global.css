@@ -655,8 +655,7 @@ input:checked + .slider:before {
   position: absolute;
   right: 0;
   text-align: right;
-  top: 25%;
-  transform: translateY(-25%);
+  margin-top: 0.25rem;
 }
 
 .form-password-visibility:hover{
@@ -665,6 +664,22 @@ input:checked + .slider:before {
   box-shadow: none;
   text-shadow: var(--shadow-2);
   color: var(--primary-500);
+}
+
+.password-standards{
+  background-color: var(--color-bg);
+  text-align: left;
+  border: 2px solid var(--primary-500);
+  padding: 0.5rem;
+}
+
+.password-standards h6{
+  text-align: center;
+}
+
+.password-standards p{
+  margin: 0;
+  font-size: var(--smallText);
 }
 
 /* End Of Form */

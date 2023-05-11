@@ -31,8 +31,19 @@ window.addEventListener('load', function(){
         }
     });
 
+    rpassword.addEventListener("keyup", function(event){
+        if (rcpassword.value != rpassword.value){
+            rpassword.style.borderColor = "var(--red-mid)";
+            rcpassword.style.borderColor = "var(--red-mid)";
+        }else{
+            rpassword.style.borderColor = "var(--primary-500)";
+            rcpassword.style.borderColor = "var(--primary-500)";
+        }
+    });
+
     // Check for Caps Lock && send form on Enter key
     var lpassword = document.getElementById("lpassword");
+    var lusername = document.getElementById("lusername");
     var capsLockWarning = document.getElementById("capslock-warning");
 
     lpassword.addEventListener("keyup", function(event){
@@ -46,6 +57,21 @@ window.addEventListener('load', function(){
             event.preventDefault();
             let submitBtn = document.querySelector("#lform button[type=submit]");
             submitBtn.click();
+        }
+    });
+    lusername.addEventListener("keyup", function(event){
+        if (event.getModifierState("CapsLock")){
+            capsLockWarning.style.display = "block";
+        }else{
+            capsLockWarning.style.display = "none";
+        }
+    });
+
+    document.addEventListener("keyup", function(event){
+        if (event.getModifierState("CapsLock")){
+            capsLockWarning.style.display = "block";
+        }else{
+            capsLockWarning.style.display = "none";
         }
     });
 
@@ -71,5 +97,7 @@ window.addEventListener('load', function(){
 
         show_input.type = "password";
     });
+
+    // Passwords Standards Validation
 });
 

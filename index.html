@@ -206,13 +206,15 @@
         <form action="#register" class="form" id="rform">
           <h4>register</h4>
           <div class="form-row">
-            <label for="name" class="form-label">username *</label>
+            <label for="rusername" class="form-label">username *</label>
             <input
               type="text"
               class="form-input"
               name="ruser"
-              id="username"
+              id="rusername"
               placeholder="first name"
+              pattern="^[a-zA-Z0-9_\-.$@*!]{8,20}$"
+              title="Please enter a username between 8 and 20 characters that includes only letters, numbers, underscores, hyphens, periods, dollar signs, at signs, asterisks, or exclamation marks."
               required
             />
           </div>
@@ -224,8 +226,17 @@
               name="rpass"
               placeholder="password"
               id="rpassword"
+              pattern="^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[!@#$%^&*()_+|\-={};:,.?]).{10,}$"
+              title="Must contain at least one number, one uppercase letter, one lowercase letter, one symbol, and be at least 10 characters long."
               required
             />
+          </div>
+          <div class="form-row password-standards">
+            <h6>Password must contain the following:</h6>
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
           </div>
           <div class="form-row">
             <label for="rcpassword" class="form-label">confirm Password *</label>
@@ -235,6 +246,8 @@
               name="rcpass"
               placeholder="confirm password"
               id="rcpassword"
+              pattern="^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[!@#$%^&*()_+|\-={};:,.?]).{10,}$"
+              title="Must contain at least one number, one uppercase letter, one lowercase letter, one symbol, and be at least 10 characters long."
               required
             />
           </div>
@@ -276,10 +289,10 @@
               type="text"
               class="modern-input"
               name="luser"
-              id="username"
+              id="lusername"
               required
             />
-            <label for="name" class="modern-label">username *</label>
+            <label for="lusername" class="modern-label">username *</label>
           </div>
           <div class="form-row">
             <div class="input-line"></div>
@@ -321,6 +334,8 @@
               class="modern-input"
               name="semail"
               id="form-semail"
+              pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$" 
+              title="Please enter a valid email address."
               required
             />
           </div>
