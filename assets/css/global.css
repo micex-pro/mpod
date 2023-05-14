@@ -696,7 +696,7 @@ input:checked + .slider:before {
 .valid:before {
   position: relative;
   left: -5px;
-  content: "✓";
+  content: "\2713";
   transition: 0.1s ease-in-out content;
 
 }
@@ -709,7 +709,7 @@ input:checked + .slider:before {
 .invalid:before {
   position: relative;
   left: -5px;
-  content: "✗";
+  content: "\2717";
   transition: 0.1s ease-in-out content;
 }
 
