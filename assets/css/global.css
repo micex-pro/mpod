@@ -671,15 +671,46 @@ input:checked + .slider:before {
   text-align: left;
   border: 2px solid var(--primary-500);
   padding: 0.5rem;
+  display: none;
+  transition: var(--transition-2);
 }
 
 .password-standards h6{
   text-align: center;
+  transition: var(--transition-2);
+  font-size: 1rem;
 }
 
 .password-standards p{
   margin: 0;
   font-size: var(--smallText);
+  transition: var(--transition-2);
+  margin-left: 1rem;
+}
+
+.valid {
+  color: var(--green-mid);
+  transition: var(--transition-2);
+}
+
+.valid:before {
+  position: relative;
+  left: -5px;
+  content: "✓";
+  transition: 0.1s ease-in-out content;
+
+}
+
+.invalid {
+  color: var(--red-mid);
+  transition: var(--transition-2);
+}
+
+.invalid:before {
+  position: relative;
+  left: -5px;
+  content: "✗";
+  transition: 0.1s ease-in-out content;
 }
 
 /* End Of Form */
@@ -732,6 +763,10 @@ input:checked + .slider:before {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 1.5rem;
+  }
+
+  .password-standards p{
+    font-size: 1rem;
   }
 }
 

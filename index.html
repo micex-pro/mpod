@@ -213,8 +213,8 @@
               name="ruser"
               id="rusername"
               placeholder="first name"
-              pattern="^[a-zA-Z0-9_\-.$@*!]{8,20}$"
-              title="Please enter a username between 8 and 20 characters that includes only letters, numbers, underscores, hyphens, periods, dollar signs, at signs, asterisks, or exclamation marks."
+              pattern="^[a-zA-Z0-9_\-.$@*!]{7,20}$"
+              title="Please enter a username between 7 and 20 characters that includes only letters, numbers, underscores, hyphens, periods, dollar signs, at signs, asterisks, or exclamation marks."
               required
             />
           </div>
@@ -231,12 +231,13 @@
               required
             />
           </div>
-          <div class="form-row password-standards">
+          <div class="form-row password-standards" id="password-standards">
             <h6>Password must contain the following:</h6>
-            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-            <p id="number" class="invalid">A <b>number</b></p>
-            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            <p id="ps-letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="ps-capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id="ps-number" class="invalid">A <b>number</b></p>
+            <p id="ps-symbol" class="invalid">A <b>symbol</b></p>
+            <p id="ps-length" class="invalid">Minimum <b>10 characters</b></p>
           </div>
           <div class="form-row">
             <label for="rcpassword" class="form-label">confirm Password *</label>
