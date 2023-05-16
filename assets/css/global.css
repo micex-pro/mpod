@@ -80,7 +80,7 @@
     0 8px 10px -6px rgb(0 0 0 / 0.1);
 
   /* Gradients */
-  --gradient-opacity: 0.013;
+  --gradient-opacity: 0.8;
 
   /* Text Styles */
   --ff-heading: "Roboto Slab", serif;
@@ -177,6 +177,59 @@ html::-webkit-scrollbar-track {
   flex-direction: column;
 }
 /* End Of Section */
+/* Start Of NavBar */
+.nav {
+  height: 5rem;
+  background-color: var(--primary-500);
+  width: 100%;
+}
+/* End Of NavBar */
+/* Start Of Hero */
+.hero {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  background: var(--gray-800);
+  margin-bottom: 1rem;
+}
+
+.hero-banner {
+  color: var(--white-bone);
+  padding: 0.5rem;
+  text-align: center;
+  text-align: center;
+  line-height: var(--line-height);
+}
+
+.hero-banner h4 {
+  margin-top: 1rem;
+  letter-spacing: var(--letter-spacing);
+}
+
+.hero-banner p {
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  margin-top: 1rem;
+  color: var(--gray-400);
+  width: 100%;
+}
+
+.hero-banner p a {
+  color: var(--primary-500);
+}
+
+.hero-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0 1rem;
+}
+
+.hero-btn a {
+  margin: 0;
+}
+/* End Of Hero */
 /* Start Of Paragraph */
 p {
   margin-bottom: 1.5rem;
@@ -324,6 +377,17 @@ li {
   color: var(--white);
 }
 
+.btn-rhollow {
+  background-color: var(--primary-500);
+  color: var(--white);
+}
+
+.btn-rhollow:hover {
+  background-color: transparent;
+  border-color: var(--primary-500);
+  color: var(--primary-500);
+}
+
 .btn-hipster {
   color: var(--primary-500);
   background: var(--primary-200);
@@ -435,7 +499,8 @@ li {
 }
 
 .form-input:focus,
-.form-textarea:focus, .modern-input:focus {
+.form-textarea:focus,
+.modern-input:focus {
   outline: none;
   border: 2px solid var(--primary-500);
   font-family: inherit;
@@ -447,7 +512,6 @@ li {
   outline: none;
   border: 2px solid var(--primary-500);
   letter-spacing: var(--letter-spacing);
-
 }
 
 .form-row {
@@ -536,19 +600,19 @@ li {
   * If the input-line has a width of 5.5 rem than the center should be (5.5 - 4.7)/2 = (0.8)/2 = 0.4. so the start position of the label should start at left: 0.4rem. 
 */
 
-.form-snewsletter{
+.form-snewsletter {
   display: flex;
   justify-content: center;
 }
 
-.input-line-center{
+.input-line-center {
   margin: 0;
   width: 3.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.input-line-center .modern-label{
+.input-line-center .modern-label {
   position: initial;
   margin: 0;
   text-align: center;
@@ -630,23 +694,23 @@ input:checked + .slider:before {
   border-radius: var(--radius-circle);
 }
 
-.form-row-condition{
+.form-row-condition {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 0 1rem;
 }
 
-.forgot-credentials{
+.forgot-credentials {
   justify-content: center;
 }
 
-#capslock-warning{
+#capslock-warning {
   color: var(--red-dark);
   display: none;
 }
 
-.form-password-visibility{
+.form-password-visibility {
   background: transparent;
   border: none;
   color: var(--black-mid);
@@ -658,7 +722,7 @@ input:checked + .slider:before {
   margin-top: 0.25rem;
 }
 
-.form-password-visibility:hover{
+.form-password-visibility:hover {
   border: none;
   background-color: transparent;
   box-shadow: none;
@@ -666,7 +730,7 @@ input:checked + .slider:before {
   color: var(--primary-500);
 }
 
-.password-standards{
+.password-standards {
   background-color: var(--color-bg);
   text-align: left;
   border: 2px solid var(--primary-500);
@@ -675,13 +739,13 @@ input:checked + .slider:before {
   transition: var(--transition-2);
 }
 
-.password-standards h6{
+.password-standards h6 {
   text-align: center;
   transition: var(--transition-2);
   font-size: 1rem;
 }
 
-.password-standards p{
+.password-standards p {
   margin: 0;
   font-size: var(--smallText);
   transition: var(--transition-2);
@@ -698,7 +762,6 @@ input:checked + .slider:before {
   left: -5px;
   content: "\2713";
   transition: 0.1s ease-in-out content;
-
 }
 
 .invalid {
@@ -741,6 +804,32 @@ input:checked + .slider:before {
     flex-direction: row;
     gap: 0 1rem;
   }
+
+  .hero-banner {
+    padding: 1rem;
+    text-align: left;
+    line-height: var(--line-height);
+  }
+
+  .hero-banner h4 {
+    text-align: left;
+    font-size: 2.5rem;
+  }
+
+  .hero-banner p,
+  .hero-banner a {
+    font-size: 1.35rem;
+    text-align: left;
+  }
+
+  .hero-btn {
+    justify-content: left;
+    padding-left: 1rem;
+  }
+
+  .hero-btn a {
+    padding: 0.75rem 2.25rem;
+  }
 }
 
 /* Laptops */
@@ -755,7 +844,7 @@ input:checked + .slider:before {
   }
 
   .alert-info {
-    /* Remove the line bellow if needed. I makes the element go full width in a grid template */
+    /* Remove the line bellow if needed. It makes the element go full width in a grid template */
     grid-column: 1 / -1;
   }
 
@@ -765,7 +854,7 @@ input:checked + .slider:before {
     gap: 0 1.5rem;
   }
 
-  .password-standards p{
+  .password-standards p {
     font-size: 1rem;
   }
 }
