@@ -118,6 +118,8 @@ body {
   font-weight: 500;
   line-height: 1.75;
   color: var(--txtColor);
+  /* the line bellow is to fix sidebar */
+  /* overflow: hidden; */
 }
 
 /* Start Of Custom Scroll Bar */
@@ -195,22 +197,113 @@ html::-webkit-scrollbar-track {
 }
 
 .nav-logo, .nav-links, .nav-uc{
-  width: 100%;
+  width: 33.333%;
   height: 100%;
 }
 
 .nav-logo{
-  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo a img{
+  object-fit: contain;
+  width: 8rem;
+}
+
+.nav-logo a{
+  margin: 0;
 }
 
 .nav-links{
-  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-open .btn{
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.sidebar-open .btn:hover{
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: var(--primary-700);
 }
 
 .nav-uc{
-  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.nav-uc p{
+  margin: 0;
+  color: var(--primary-700);
+  font-size: 1.5rem;
+  width: 0;
+}
+
+.nav-uc .btn{
+  margin: 0;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  font-size: 1.5rem;
+  color: var(--primary-700);
+}
+
+.nav-uc .btn:hover{
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: var(--white);
 }
 /* End Of NavBar */
+/* Start Of SideBar */
+
+.sidebar{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(34, 34, 34, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.show-sidebar{
+  display: flex;
+}
+
+.sidebar-links{
+  border: 1px solid red;
+  width: 100%;
+  height: 66.666%;
+}
+
+.sidebar-links ul li a{
+  color: var(--primary-500);
+  letter-spacing: var(--letter-spacing);
+}
+
+.sidebar-tos{
+  border: 1px solid red;
+  height: 16.665%;
+}
+
+.sidebar-close{
+  height: 16.665%;
+}
+/* End Of SideBar */
 /* Start Of Hero */
 .hero {
   width: 100%;
@@ -597,7 +690,7 @@ li {
   top: -0.7rem;
   transition: 0.2s ease-in-out top;
   pointer-events: none;
-  z-index: 100;
+  z-index: 10;
 }
 
 .modern-input {
@@ -633,7 +726,7 @@ li {
   background: var(--primary-50);
   width: 5.5rem;
   margin-left: 0.5rem;
-  z-index: 50;
+  z-index: 5;
   position: absolute;
 }
 
