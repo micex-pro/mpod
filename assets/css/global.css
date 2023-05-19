@@ -118,8 +118,6 @@ body {
   font-weight: 500;
   line-height: 1.75;
   color: var(--txtColor);
-  /* the line bellow is to fix sidebar */
-  /* overflow: hidden; */
 }
 
 /* Start Of Custom Scroll Bar */
@@ -186,7 +184,7 @@ html::-webkit-scrollbar-track {
   width: 100%;
 }
 
-.nav-center{
+.nav-center {
   max-width: var(--width-max);
   margin: 0 auto;
   height: 100%;
@@ -196,33 +194,35 @@ html::-webkit-scrollbar-track {
   justify-content: space-between;
 }
 
-.nav-logo, .nav-links, .nav-uc{
+.nav-logo,
+.nav-links,
+.nav-uc {
   width: 33.333%;
   height: 100%;
 }
 
-.nav-logo{
+.nav-logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nav-logo a img{
+.nav-logo a img {
   object-fit: contain;
   width: 8rem;
 }
 
-.nav-logo a{
+.nav-logo a {
   margin: 0;
 }
 
-.nav-links{
+.nav-links {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.sidebar-open .btn{
+.sidebar-open .btn {
   background-color: transparent;
   border-color: transparent;
   box-shadow: none;
@@ -230,27 +230,27 @@ html::-webkit-scrollbar-track {
   margin: 0;
 }
 
-.sidebar-open .btn:hover{
+.sidebar-open .btn:hover {
   background-color: transparent;
   border-color: transparent;
   box-shadow: none;
   color: var(--primary-700);
 }
 
-.nav-uc{
+.nav-uc {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
-.nav-uc p{
+.nav-uc p {
   margin: 0;
   color: var(--primary-700);
   font-size: 1.5rem;
   width: 0;
 }
 
-.nav-uc .btn{
+.nav-uc .btn {
   margin: 0;
   background-color: transparent;
   border-color: transparent;
@@ -259,7 +259,7 @@ html::-webkit-scrollbar-track {
   color: var(--primary-700);
 }
 
-.nav-uc .btn:hover{
+.nav-uc .btn:hover {
   background-color: transparent;
   border-color: transparent;
   box-shadow: none;
@@ -268,40 +268,111 @@ html::-webkit-scrollbar-track {
 /* End Of NavBar */
 /* Start Of SideBar */
 
-.sidebar{
+.sidebar {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background-color: rgba(34, 34, 34, 0.9);
+  background-color: rgba(34, 34, 34, 0.97);
   z-index: 1000;
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: column;
+  transition: var(--transition-2);
 }
 
-.show-sidebar{
-  display: flex;
+.show-sidebar {
+  transform: translateX(0);
 }
 
-.sidebar-links{
-  border: 1px solid red;
+.hide-sidebar {
+  transform: translateX(-100%);
+}
+
+.sidebar-links {
   width: 100%;
   height: 66.666%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sidebar-links ul li a{
+.sidebar-links ul {
+  width: 100%;
+}
+
+.sidebar-links ul li {
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.sidebar-links ul li a {
   color: var(--primary-500);
   letter-spacing: var(--letter-spacing);
+  margin: 0;
+  font-size: 1.5rem;
+  width: 100%;
 }
 
-.sidebar-tos{
-  border: 1px solid red;
-  height: 16.665%;
+.sidebar-links ul li:hover {
+  padding-left: 1rem;
+  background-color: var(--primary-500);
+  transition: var(--transition-2);
 }
 
-.sidebar-close{
+.sidebar-links ul li:hover a {
+  color: var(--white);
+}
+
+.sidebar-tos {
+  border-top: 2px solid rgba(30, 30, 30, 0.8);
   height: 16.665%;
+  width: 80%;
+}
+
+.sidebar-tos ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0 1rem;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-tos ul li a {
+  color: var(--white-mid);
+  letter-spacing: var(--letter-spacing);
+  margin: 0;
+}
+
+.sidebar-tos ul li a:hover {
+  color: var(--primary-500);
+}
+
+.sidebar-close {
+  border-bottom: 2px solid rgba(30, 30, 30, 0.8);
+  height: 16.665%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-close .btn {
+  margin: 0;
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 3rem;
+}
+.sidebar-close .btn:hover {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--red-mid);
+  transform: scale(1.04);
 }
 /* End Of SideBar */
 /* Start Of Hero */
@@ -355,14 +426,14 @@ html::-webkit-scrollbar-track {
   margin: 0;
 }
 
-.hero-btn .btn-hollow:hover{
+.hero-btn .btn-hollow:hover {
   border-color: var(--primary-500);
   background-color: transparent;
   color: var(--primary-500);
   transform: scale(1.02);
 }
 
-.hero-btn .btn-rhollow:hover{
+.hero-btn .btn-rhollow:hover {
   background-color: var(--primary-500);
   border-color: var(--primary-500);
   color: var(--white);
@@ -416,7 +487,7 @@ a {
   text-decoration: none;
   text-transform: capitalize;
   color: var(--color-txt);
-  letter-spacing: 1px;
+  letter-spacing: var(--letter-spacing);
   font-size: 1rem;
   transition: var(--transition-2);
   margin-bottom: 1rem;
@@ -457,6 +528,7 @@ ul {
 
 li {
   text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
 }
 /* End Of Lists */
 /* Start Of Images */
@@ -918,7 +990,7 @@ input:checked + .slider:before {
 /* End Of Form */
 
 /* Start Of Animations */
-.animation{
+.animation {
   width: 5rem;
   height: 5rem;
   border: 5px solid var(--gray-400);
@@ -935,26 +1007,27 @@ input:checked + .slider:before {
   margin-top: 2rem;
 }
 
-.animation-circle{
+.animation-circle {
   border-radius: var(--radius-circle);
 }
 
-.animation-square{
+.animation-square {
   border-color: var(--primary-500);
   animation-duration: 3s;
   animation-name: loading-square;
 }
 
-.animation-progress{
+.animation-progress {
   width: 0%;
   height: 1.5rem;
   transition: var(--transition-2);
   background-color: var(--primary-500);
-  box-shadow: 0 10px 15px -3px rgb(144 238 144 / 0.1), 0 4px 6px -4px rgb(144 238 144 / 0.1);
+  box-shadow: 0 10px 15px -3px rgb(144 238 144 / 0.1),
+    0 4px 6px -4px rgb(144 238 144 / 0.1);
 
   border-color: transparent;
   animation-name: progress;
-  animation-duration:0.6s;
+  animation-duration: 0.6s;
   animation-fill-mode: forwards;
 }
 
@@ -977,12 +1050,12 @@ input:checked + .slider:before {
   box-shadow: 0 10px 15px -3px rgb(144 238 144 / 0.1),
     0 4px 6px -4px rgb(144 238 144 / 0.1);
   animation-name: loading-progress;
-  animation-duration:0.6s;
+  animation-duration: 0.6s;
   animation-fill-mode: forwards;
 }
 
 @keyframes loading-circle {
-  to{
+  to {
     transform: rotate(360deg);
   }
 }
@@ -999,7 +1072,7 @@ input:checked + .slider:before {
   }
   25% {
     transform: rotate(90deg);
-  }  
+  }
   50% {
     transform: rotate(90deg);
   }
@@ -1012,7 +1085,7 @@ input:checked + .slider:before {
 }
 /* End Of Animations */
 /* Start Of Footer */
-.footer{
+.footer {
   width: 100%;
   height: 30rem;
   background-color: var(--black-mid);
@@ -1080,12 +1153,15 @@ input:checked + .slider:before {
     font-size: 1rem;
   }
 
+  .hero {
+    align-items: start;
+  }
   .hero-banner h4 {
     text-align: left;
     font-size: 3rem;
   }
 
-  .hero-banner{
+  .hero-banner {
     text-align: left;
     padding: 1rem;
   }
@@ -1096,7 +1172,7 @@ input:checked + .slider:before {
     font-size: 1.15rem;
   }
 
-  .hero-btn{
+  .hero-btn {
     padding-left: 1rem;
     justify-content: left;
   }
@@ -1113,7 +1189,6 @@ input:checked + .slider:before {
     grid-template-columns: repeat(2, 1fr);
     gap: 0 1.5rem;
   }
-
 
   .hero-banner h4 {
     font-size: 3.5rem;
