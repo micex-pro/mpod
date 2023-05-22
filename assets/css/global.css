@@ -128,12 +128,12 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-thumb {
   background-color: var(--primary-300);
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 html::-webkit-scrollbar-track {
   background-color: #f1f1f1;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 /* End Of Custom Scroll Bar */
 /* Start hide / show */
@@ -228,13 +228,14 @@ html::-webkit-scrollbar-track {
   box-shadow: none;
   font-size: 3rem;
   margin: 0;
+  color: var(--primary-700);
 }
 
 .sidebar-open .btn:hover {
   background-color: transparent;
   border-color: transparent;
   box-shadow: none;
-  color: var(--primary-700);
+  color: var(--primary-900);
 }
 
 .nav-uc {
@@ -245,7 +246,7 @@ html::-webkit-scrollbar-track {
 }
 .nav-uc p {
   margin: 0;
-  color: var(--primary-700);
+  color: var(--primary-800);
   font-size: 1.5rem;
   width: 0;
 }
@@ -256,14 +257,27 @@ html::-webkit-scrollbar-track {
   border-color: transparent;
   box-shadow: none;
   font-size: 1.5rem;
-  color: var(--primary-700);
+  color: var(--primary-800);
 }
 
 .nav-uc .btn:hover {
   background-color: transparent;
   border-color: transparent;
   box-shadow: none;
-  color: var(--white);
+  color: var(--primary-900);
+}
+
+.nav-link-list{
+  display: none;
+}
+
+.nav-link-list li a{
+  color: var(--primary-800);
+  font-size: 1rem;
+}
+
+.nav-link-list li a:hover{
+  color: var(--primary-900);
 }
 /* End Of NavBar */
 /* Start Of SideBar */
@@ -313,6 +327,7 @@ html::-webkit-scrollbar-track {
   margin: 0;
   font-size: 1.5rem;
   width: 100%;
+  display: block;
 }
 
 .sidebar-links ul li:hover {
@@ -679,12 +694,12 @@ li {
 
 .form::-webkit-scrollbar-thumb {
   background-color: var(--primary-300);
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .form::-webkit-scrollbar-track {
   background-color: #f1f1f1;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .form h4 {
@@ -1087,9 +1102,99 @@ input:checked + .slider:before {
 /* Start Of Footer */
 .footer {
   width: 100%;
-  height: 30rem;
+  height: 60rem;
   background-color: var(--black-mid);
 }
+
+.footer-center{
+  margin: 0 auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: var(--width-max);
+}
+
+.footer-logo, .footer-about, .footer-sitemap, .footer-contact, .footer-social, .footer-copyright {
+  height: 23.333%;
+  width: 100%;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo a img {
+  object-fit: contain;
+  width: 8rem;
+}
+
+.footer-logo a {
+  margin: 0;
+}
+
+.footer-section{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-title{
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  /* color: var(--primary-500); */
+  color: var(--red-mid);
+
+  margin: 0;
+}
+
+.footer-banner{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.footer-banner p{
+  color: var(--white-mid);
+  margin: 0;
+}
+
+.footer-copyright{
+  height: 10%;
+  border-top: 2px solid rgba(30, 30, 30, 1);
+  width: 80%;
+}
+
+.footer-sitemap-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.footer-sitemap-list li a{
+  margin: 0;
+  color: var(--white-mid);
+}
+
+.footer-sitemap-list li a:hover{
+  color: rgba(242, 70, 70, 1);
+}
+
 /* End Of Footer */
 /* Responsive - media queries */
 /* Tablets */
@@ -1179,6 +1284,30 @@ input:checked + .slider:before {
 
   .hero-btn a {
     padding: 1rem 3.5rem;
+  }
+
+  .sidebar-open{
+    display: none;
+  }
+
+  .nav-uc a[href="#lform"]::after{
+    content: " login";
+    font-family: inherit;
+    font-size: 1.25rem;
+  }
+
+  .nav-uc a[href="#rform"]::after{
+    content: " sign up";
+    font-family: inherit;
+    font-size: 1.25rem;
+  }
+
+  .nav-link-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1rem;
   }
 }
 
