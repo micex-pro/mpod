@@ -433,20 +433,38 @@
             </div>
           </div>
         </div>
-        <div class="footer-contact">
+        <div class="footer-newsletter">
           <div class="footer-section">
             <h4 class="footer-title">newsletter</h4>
             <div class="footer-banner">
-              <p>Best Premade CSS & HTML designs for modern websites. Made with love from the MiceX.Pro team.</p>
+              <form action="#" class="footer-form" id="footer-form" method="POST">
+                <div class="form-row">
+                  <input
+                    type="email"
+                    class="modern-input"
+                    name="footer_semail"
+                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$" 
+                    title="Please enter a valid email address."
+                    placeholder="E-mail address"
+                    required
+                  />
+                  <div class="footer-btn-parent">
+                    <button type="submit" class="btn" id="footer-form-btn">join</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
         <div class="footer-social">
           <div class="footer-section">
             <h4 class="footer-title">social</h4>
-            <div class="footer-banner">
-              <p>Best Premade CSS & HTML designs for modern websites. Made with love from the MiceX.Pro team.</p>
+            <div class="footer-banner" id="footer-social-btns">
+                <a href="#" class="btn social-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="btn social-btn"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="btn social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
+            <p>Contact us: <a href="mailto:contact@micex.pro">contact@micex.pro</a></p>
           </div>
         </div>
         <div class="footer-copyright">
