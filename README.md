@@ -50,5 +50,5 @@ This project is used by the following companies:
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
-![MiceX.Pro](https://mpod.micex.pro/assets/images/MiceX-logo.png)
+![MiceX.Pro](http://mpod.micex.pro/assets/images/MiceX-logo.png)
 
