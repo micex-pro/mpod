@@ -1432,7 +1432,7 @@ input:checked + .slider:before {
 
   .footer-center{
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: start;
     padding: 3rem 0 0 0;
