@@ -1435,8 +1435,8 @@ input:checked + .slider:before {
     grid-template-columns: repeat(3, auto);
     justify-content: center;
     align-items: start;
-    padding: 1rem;
-    padding-top: 3rem;
+    padding: 3rem 0 0 0;
+    grid-gap: 1rem 1rem;
     
   }
 
@@ -1456,6 +1456,7 @@ input:checked + .slider:before {
   .footer-logo{
     grid-column: 1 / 4;
     grid-row: 4;
+    margin-top: -3rem;
   }
 
   .footer-about{
