@@ -1,0 +1,6 @@
+Contact: security@micex.pro
+Encryption: https://mpod.micex.pro/pgp-key.asc
+Acknowledgments: https://mpod.micex.pro/hall-of-fame.html
+Preferred-Languages: en
+Canonical: https://mpod.micex.pro/security.txt
+Expires: 365    

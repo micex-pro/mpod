@@ -1,0 +1,135 @@
+===========================
+    Web Files Explained
+===========================
+
+1. robots.txt:
+--------------
+robots.txt is a text file placed in the root directory of a website to provide instructions to search engine crawlers. It specifies which pages or directories should be crawled and which should be excluded. It helps control how search engines access and index your website's content.
+
+2. security.txt:
+---------------
+security.txt is a standard that allows website owners to provide contact information for security researchers. Placed in the root directory, it enables ethical hackers to report security vulnerabilities. It typically includes contact email addresses, preferred communication channels, and a policy for responsible disclosure.
+
+3. ads.txt (Google AdSense):
+----------------------------
+ads.txt is a file used by publishers to publicly declare authorized sellers of their digital ad inventory on websites using Google AdSense. It helps prevent ad fraud by verifying that sellers are authorized by the publisher. It includes information like the platform ID and the seller's account ID.
+
+4. sitemap.xml:
+---------------
+sitemap.xml is an XML file that lists the URLs and metadata of important pages on a website. It helps search engine crawlers discover and understand the structure of the site. Sitemap.xml includes details such as the last modification date of a page, its frequency of updates, and its priority. Submitting the sitemap to search engines improves the site's visibility in search results.
+
+Note: These files play crucial roles in website management, security, ad inventory transparency, and search engine optimization. Ensure their correct placement, regular updates, and adherence to respective specifications for optimal effectiveness.
+
+===========================
+
+===========================
+    SEO
+===========================
+
+1. sitemap.xml: 
+---------------
+A good sitemap.xml is really important.
+
+2. keywords:
+------------
+Conduct keyword research to find the relevant terms and phrases that people in your target market are most likely to use to find your website's products, services, or information. Find high-demand, low-competition keywords that you can use in your content by using keyword research tools.
+
+3. Optimize On-Page Elements:
+-----------------------------
+    - Title Tags: Include targeted keywords in the title tags of your web pages. Keep titles concise, unique, and descriptive.
+    - Meta Descriptions: Write compelling meta descriptions that accurately summarize the content and entice users to click through from search results.
+    - Heading Tags: Use heading tags (H1, H2, H3, etc.) to structure your content and highlight important headings.
+    - URL Structure: Create clean, readable URLs that include relevant keywords and accurately represent the page's content.
+    - Image Optimization: Optimize images by adding descriptive alt text, compressing file sizes, and using relevant file names.
+
+4. Develop High-Quality Content:
+--------------------------------
+Create unique, informative, and engaging content that adds value to your audience. Use targeted keywords naturally within your content, including headings, paragraphs, and image alt text. 
+Aim for longer-form content when appropriate, as it tends to perform well in search results.
+
+5. Improve Website Speed and Performance:
+-----------------------------------------
+Optimize your website's loading speed by compressing images, minifying code, enabling browser caching, and using a reliable hosting provider. 
+A fast-loading website improves user experience and search engine rankings.
+
+6. Mobile Optimization: 
+-----------------------
+Ensure your website is mobile-friendly and responsive, as mobile usability is a significant ranking factor. 
+Optimize your design, layout, and content to provide a seamless experience across different devices.
+
+7. Build High-Quality Backlinks:
+--------------------------------
+Acquire backlinks from reputable and authoritative websites in your industry. (in short, from one platform to another)
+Focus on earning natural, relevant backlinks through guest blogging, influencer collaborations, content partnerships, and creating valuable resources that others want to link to.
+
+8. Use Social Media: 
+--------------------
+Leverage social media platforms to promote your content and engage with your audience. 
+Sharing your content on social media can increase visibility and generate social signals, which can indirectly impact your SEO rankings.
+
+9. Monitor and Analyze: 
+-----------------------
+Regularly monitor your website's performance using tools like Google Analytics and Google Search Console. 
+Analyze key metrics such as organic traffic, keyword rankings, user behavior, and conversion rates. 
+Use the insights gained to identify areas for improvement and adjust your SEO strategy accordingly.
+
+===========================
+
+===========================
+    Global.css
+===========================
+
+1. Colors: 
+----------
+Manual Approach
+
+- [coolors](https://coolors.co/)
+- [happyhues](https://www.happyhues.co/)
+- select your own color
+- get shades [shadowlord](https://noeldelgado.github.io/shadowlord/#73fdad)
+
+Library/Faster Approach
+
+- [bootstrap](https://getbootstrap.com/docs/5.0/customize/color/#color-sass-maps)
+- [tailwind](https://tailwindcss.com/docs/customizing-colors#color-palette-reference)
+
+#### Select Grey
+
+- [tailwind](https://tailwindcss.com/docs/customizing-colors#color-palette-reference)
+
+#### Just go with happyhues
+
+- [happyheus](https://www.happyhues.co/)
+
+#### Box Shadow
+
+- [tailwind](https://tailwindcss.com/docs/box-shadow)
+
+2. Fonts:
+---------
+- [fontpair](https://www.fontpair.co/)
+- [pagecloud](https://www.pagecloud.com/blog/best-google-fonts-pairings)
+
+3. Normilize:
+-------------
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
+- Go to [Docs ](https://necolas.github.io/normalize.css/)
+- Select the latest version
+- Create normalize.css
+- Setup the link in the html
+
+```html
+<link rel="stylesheet" href="./normalize.css" />
+```
+
+
+4. Favicon:
+-----------
+https://favicon.io/

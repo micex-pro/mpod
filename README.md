@@ -35,7 +35,7 @@ Install MPOD using git clone command
 You can use XAMPP to run it or any webserver, local or public.
 ## Support
 
-For support, email us at contact@micex.pro
+For support, email us at support@micex.pro
 
 
 ## Used By

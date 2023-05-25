@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- changefreq options = [daily, weekly, monthly, never] -->
+  <!-- Homepage -->
+  <url>
+    <loc>https://mpod.micex.pro/</loc>
+    <lastmod>2023-05-25</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <!-- <url>
+    <loc>https://mpod.micex.pro/duplicate-content</loc>
+    <lastmod>2023-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <link rel="canonical">https://mpod.micex.pro/preferred-url</link>
+  </url> -->
+
+  <!-- Regularly Update and Submit Sitemap -->
+  <url>
+    <loc>https://mpod.micex.pro/sitemap.xml</loc>
+    <lastmod>2023-05-25</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+</urlset>
