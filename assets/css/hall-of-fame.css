@@ -1,0 +1,53 @@
+.lists-section{
+    margin-top: 2rem;
+}
+
+.nav-list{
+    width: 100%;
+    text-align: center;
+}
+
+.nav-list li{
+    background-color: rgba(156, 163, 175, 0.1);
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.nav-list li a{
+    width: 100%;
+}
+
+.youtube:hover{
+    color: var(--red-mid);
+}
+
+.twitter:hover{
+    color: var(--blue-mid);
+}
+
+.nav-list .thanking{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nav-list h3{
+    margin: 0;
+}
+
+.nav-list p{
+    margin: 0;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-list{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .socials{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
