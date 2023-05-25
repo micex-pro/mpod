@@ -2,7 +2,9 @@
 # MPOD - MiceX Premade Ordinary Designs
 
 Best Premade CSS & HTML designs for modern websites. Made with love from the MiceX.Pro team.
+This project support all types of webservers, however the main type is Apache (LAMP).
 
+If you want a MPod project that support Node.js please check out v2 branch (Comming Soon).
 
 ## Authors
 
