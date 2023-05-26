@@ -1,0 +1,23 @@
+/* TEAM */
+
+Site: MPod - MiceX Premade Ordinary Designs
+Members: MiceX.Pro Team
+Location: Israel, Netivot
+Contact: contact@micex.pro
+
+/* THANKS */
+
+Thanks to all the contributors who have helped and thanks to all who dontaned to help us upgrade the platform.
+
+/* SITE INFO */
+
+Last updated: May 26, 2023
+Version: 0.4.0
+
+/* TECHNOLOGY */
+
+Front-end: HTML5, CSS3, JavaScript
+
+/* COPYRIGHT */
+
+© 2023 MiceX.Pro. All rights reserved.

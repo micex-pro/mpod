@@ -7,3 +7,37 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Disable directory listing
 Options -Indexes
+
+# Protect .htaccess
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+
+# Prevent Access To Specific File Types
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|json)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+# Set The Default Index File
+DirectoryIndex index.html index.php
+
+# Error Pages
+ErrorDocument 403 https://mpod.micex.pro/403.html
+ErrorDocument 404 https://mpod.micex.pro/404.html
+ErrorDocument 500 https://mpod.micex.pro/500.html
+
+# Block An IP Address From Accessing The Web Site
+# Order Allow, Deny
+# Allow from all
+# Deny from x.x.x.x
+
+# Caching Of Static Files
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

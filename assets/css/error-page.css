@@ -1,0 +1,39 @@
+body {
+  background-color: var(--gray-800);
+}
+
+.section {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.section-content img {
+  width: 100%;
+}
+
+.section-title {
+  color: var(--red-mid);
+}
+
+.title-underline {
+  background-color: var(--red-mid);
+}
+
+.btn {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.btn:hover {
+  background-color: var(--white);
+  color: var(--black-mid);
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    padding: 0.575rem 1.5rem;
+  }
+}
