@@ -9,7 +9,7 @@ If you want a MPod project that support Node.js please check out v2 branch (Comm
 ## Authors
 
 - [@micex-pro](https://github.com/micex-pro)
-- [@shonber](https://www.github.com/octokatherine)
+- [@shonber](https://www.github.com/shonber)
 
 
 ## Features
