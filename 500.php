@@ -70,24 +70,16 @@
     <!-- End Twitter -->
     <!-- End SEO -->
 
-    <!-- Start Global CSS -->
+    <!-- Start Local CSS -->
     <link rel="stylesheet" href="./assets/css/normilize.css" />
     <link rel="stylesheet" href="./assets/css/global.css" />
-    <!-- End Global CSS -->
-
-    <!-- Start Local Styles -->
     <link rel="stylesheet" href="./assets/css/error-page.css" />
-    <!-- End Local Styles -->
+    <!-- End Local CSS -->
 
-    <!-- Start External Styles -->
-    <!-- End External Styles -->
+    <!-- Start External CSS -->
+    <!-- End External CSS -->
 
     <!-- Start Font Awesome - Icons -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://micex-pro.github.io/fontawesome-free-6.2.1-web/css/all.min.css"
-    /> -->
-
     <link
       rel="stylesheet"
       href="./assets/icons/fontawesome-free-6.2.1-web/css/all.min.css"
@@ -128,7 +120,13 @@
     </section>
     <!-- End Of 500 -->
     <!-- Start Local JS Files -->
-    <script src="./assets/js/global.js"></script>
+    <script src="./assets/js/smoothScrolling.js"></script>
+    <script src="./assets/js/cookie.js"></script>
+    <script src="./assets/js/sideBar.js"></script>
+    <script src="./assets/js/passwordStandardsValidation.js"></script>
+    <script src="./assets/js/passwordVisibility.js"></script>
+    <script src="./assets/js/pressedKeyboardKeys.js"></script>
+    <script src="./assets/js/confirmedPassword.js"></script>
     <!-- End Local JS Files -->
     <!-- Start External JS Files -->
     <!-- End External JS Files -->
