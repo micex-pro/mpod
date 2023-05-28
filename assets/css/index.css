@@ -1,0 +1,54 @@
+/* Import Global CSS */
+@import url("./global.css");
+
+/* Start Of Media Queries */
+/* Small Phones */
+@media screen and (min-width: 320px) {
+}
+/* Medium Phones */
+@media screen and (min-width: 375px) {
+}
+/* Large Phones */
+@media screen and (min-width: 425px) {
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+  .heading-section .section-content,
+  .anchors-section .section-content,
+  .buttons-section .section-content,
+  .alerts-section .section-content,
+  .animations-section .section-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 5rem;
+  }
+
+  .anchors-section .section-content,
+  .small-section .section-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+}
+
+/* Laptops */
+@media screen and (min-width: 1024px) {
+  .heading-section .section-content,
+  .anchors-section .section-content,
+  .buttons-section .section-content,
+  .alerts-section .section-content,
+  .anchors-section .section-content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 1.5rem;
+  }
+}
+
+/* Large Laptops */
+@media screen and (min-width: 1440px) {
+}
+
+/* 4K Screens */
+@media screen and (min-width: 2560px) {
+}
+/* End Of Media Queries */

@@ -1,36 +1,21 @@
-body {
-  background-color: var(--gray-800);
+/* Import Global CSS */
+@import url("./global.css");
+
+/* Start Of Lists */
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.section {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+li {
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
 }
-
-.section-content img {
-  width: 100%;
-}
-
-.section-title {
-  color: var(--red-mid);
-}
-
-.title-underline {
-  background-color: var(--red-mid);
-}
-
-.btn {
-  border-color: var(--white);
-  color: var(--white);
-}
-
-.btn:hover {
-  background-color: var(--white);
-  color: var(--black-mid);
-}
+/* End Of Lists */
 
 /* Start Of Media Queries */
 /* Small Phones */
@@ -45,9 +30,6 @@ body {
 
 /* Tablets */
 @media screen and (min-width: 768px) {
-  .btn {
-    padding: 0.575rem 1.5rem;
-  }
 }
 
 /* Laptops */

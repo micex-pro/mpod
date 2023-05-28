@@ -1,0 +1,368 @@
+/* Import Global CSS */
+@import url("./global.css");
+
+/* Start Of Form */
+.form {
+  max-width: var(--width-section);
+  width: 90vw;
+  border: 1px solid var(--primary-600);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+  padding: 2rem 2.5rem;
+  background-color: var(--primary-50);
+  margin: 3rem auto;
+  overflow: auto;
+}
+
+.form::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.form::-webkit-scrollbar-thumb {
+  background-color: var(--primary-300);
+  /* border-radius: 10px; */
+}
+
+.form::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  /* border-radius: 10px; */
+}
+
+.form h4 {
+  color: var(--primary-600);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--smallText);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--primary-200);
+  background-color: var(--color-bg);
+  transition: var(--transition-2);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.modern-input:focus {
+  outline: none;
+  border: 2px solid var(--primary-500);
+  font-family: inherit;
+  letter-spacing: var(--letter-spacing);
+}
+
+.form-input:valid,
+.form-textarea:valid {
+  outline: none;
+  border: 2px solid var(--primary-500);
+  letter-spacing: var(--letter-spacing);
+}
+
+.form-row {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+::placeholder {
+  font-family: inherit;
+  color: var(--gray-400);
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+}
+
+.form-alert-error {
+  color: var(--red-dark);
+  letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
+  transition: var(--transition-2);
+}
+
+.form-alert-success {
+  color: var(--green-dark);
+  letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
+  transition: var(--transition-2);
+}
+
+.modern-label {
+  display: block;
+  font-size: var(--smallText);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  position: absolute;
+  left: 0.9rem;
+  top: -0.7rem;
+  transition: 0.2s ease-in-out top;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.modern-input {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--primary-200);
+  background-color: var(--color-bg);
+  transition: var(--transition-2);
+  margin-bottom: 1rem;
+  letter-spacing: var(--letter-spacing);
+}
+
+.modern-input:hover + .modern-label {
+  top: -1.25rem;
+}
+.modern-input:valid + .modern-label {
+  top: -1.25rem;
+  color: var(--primary-600);
+}
+.modern-input:focus + .modern-label {
+  top: -1.25rem;
+  color: var(--primary-600);
+}
+
+.modern-input:valid {
+  outline: none;
+  border: 2px solid var(--primary-500) !important;
+  letter-spacing: var(--letter-spacing);
+}
+
+.input-line {
+  height: 2px;
+  background: var(--primary-50);
+  width: 5.5rem;
+  margin-left: 0.5rem;
+  z-index: 5;
+  position: absolute;
+}
+
+/* 
+  * To calculate the center of the line you need to calculate the length of the label:
+    * the label should have a font-size of 0.7em and a letter-spacing of 0.1rem.
+    * To calculate the width of the label, we need to take into account the font-size, letter-spacing, and the length of the label text. Assuming the font family is consistent, * we can estimate an average width of each character to be around 0.5em.
+    * So the width of the label with the text "username *" would be:
+    * (8 characters * 0.5em) + (0.1rem * 7) = 4em + 0.7rem = 4.7rem\
+  * If the input-line has a width of 5.5 rem than the center should be (5.5 - 4.7)/2 = (0.8)/2 = 0.4. so the start position of the label should start at left: 0.4rem. 
+*/
+
+.form-snewsletter {
+  display: flex;
+  justify-content: center;
+}
+
+.input-line-center {
+  margin: 0;
+  width: 3.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-line-center .modern-label {
+  position: initial;
+  margin: 0;
+  text-align: center;
+}
+
+.form-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  transition: var(--transition-2);
+  float: left;
+}
+
+.form-switch:hover {
+  transform: scale(1.02);
+}
+
+.form-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gray-200);
+  transition: var(--transition-2);
+}
+
+.slider:hover {
+  background-color: var(--primary-200);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: var(--transition-2);
+}
+
+input:checked + .slider {
+  background-color: var(--primary-400);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--gray-200);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  box-shadow: 0 0 1px var(--primary-400);
+}
+
+.round {
+  border-radius: 34px;
+}
+
+.condition-label {
+  display: inline;
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+.condition-label .link {
+  font-size: 0.7rem;
+}
+
+.slider.round:before {
+  border-radius: var(--radius-circle);
+}
+
+.form-row-condition {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.forgot-credentials {
+  justify-content: center;
+}
+
+#capslock-warning {
+  color: var(--red-dark);
+  display: none;
+}
+
+.form-password-visibility {
+  background: transparent;
+  border: none;
+  color: var(--black-mid);
+  box-shadow: none;
+  text-shadow: var(--shadow-2);
+  position: absolute;
+  right: 0;
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+.form-password-visibility:hover {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  text-shadow: var(--shadow-2);
+  color: var(--primary-500);
+}
+
+.password-standards {
+  background-color: var(--color-bg);
+  text-align: left;
+  border: 2px solid var(--primary-500);
+  padding: 0.5rem;
+  display: none;
+  transition: var(--transition-2);
+}
+
+.password-standards h6 {
+  text-align: center;
+  transition: var(--transition-2);
+  font-size: 1rem;
+}
+
+.password-standards p {
+  margin: 0;
+  font-size: var(--smallText);
+  transition: var(--transition-2);
+  margin-left: 1rem;
+}
+
+.valid {
+  color: var(--green-mid);
+  transition: var(--transition-2);
+}
+
+.valid:before {
+  position: relative;
+  left: -5px;
+  content: "\2713";
+  transition: 0.1s ease-in-out content;
+}
+
+.invalid {
+  color: var(--red-mid);
+  transition: var(--transition-2);
+}
+
+.invalid:before {
+  position: relative;
+  left: -5px;
+  content: "\2717";
+  transition: 0.1s ease-in-out content;
+}
+/* End Of Form */
+
+/* Start Of Media Queries */
+/* Small Phones */
+@media screen and (min-width: 320px) {
+}
+/* Medium Phones */
+@media screen and (min-width: 375px) {
+}
+/* Large Phones */
+@media screen and (min-width: 425px) {
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+}
+
+/* Laptops */
+@media screen and (min-width: 1024px) {
+  .password-standards p {
+    font-size: 1rem;
+  }
+}
+
+/* Large Laptops */
+@media screen and (min-width: 1440px) {
+  .form-section .section-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 1.5rem;
+  }
+}
+
+/* 4K Screens */
+@media screen and (min-width: 2560px) {
+}
+/* End Of Media Queries */

@@ -1,0 +1,114 @@
+/* Import Global CSS */
+@import url("./global.css");
+
+/* Start Of Paragraph */
+p {
+  margin-bottom: 1.5rem;
+  max-width: 40em;
+  width: 90%;
+}
+/* End Of Paragraph */
+/* Start Of Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.75rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+h6 {
+  font-size: 1.25rem;
+}
+
+/* End Of Headings */
+/* Start of Anchors */
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--color-txt);
+  letter-spacing: var(--letter-spacing);
+  font-size: 1rem;
+  transition: var(--transition-2);
+  margin-bottom: 1rem;
+}
+
+.nav-anchor:hover {
+  color: var(--primary-500);
+}
+
+.link:hover {
+  color: var(--primary-500);
+  transform: scale(1.1);
+}
+
+.footer-anchor:hover {
+  color: var(--primary-500);
+  padding-left: 3rem;
+  text-shadow: 0 4px 6px -1px rgb(49 196 141 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+/* End Of Anchors */
+/* Start Of Small Text */
+small,
+.text_small {
+  font-size: var(--smallText);
+  margin-bottom: 0;
+}
+/* End Of Small Text */
+
+/* Start Of Media Queries */
+/* Small Phones */
+@media screen and (min-width: 320px) {
+}
+/* Medium Phones */
+@media screen and (min-width: 375px) {
+}
+/* Large Phones */
+@media screen and (min-width: 425px) {
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 0 1rem;
+  }
+}
+
+/* Laptops */
+@media screen and (min-width: 1024px) {
+}
+
+/* Large Laptops */
+@media screen and (min-width: 1440px) {
+}
+
+/* 4K Screens */
+@media screen and (min-width: 2560px) {
+}
+/* End Of Media Queries */
