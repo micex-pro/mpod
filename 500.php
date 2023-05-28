@@ -71,7 +71,6 @@
     <!-- End SEO -->
 
     <!-- Start Local CSS -->
-    <link rel="stylesheet" href="./assets/css/normilize.css" />
     <link rel="stylesheet" href="./assets/css/global.css" />
     <link rel="stylesheet" href="./assets/css/error-page.css" />
     <!-- End Local CSS -->

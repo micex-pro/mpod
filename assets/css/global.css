@@ -9,6 +9,19 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;600&family=Roboto:wght@100;400;500&display=swap");
 
+/* Imports All Styles */
+@import url("./normilize.css");
+@import url("./alerts.css");
+@import url("./animations.css");
+@import url("./buttons.css");
+@import url("./footer.css");
+@import url("./forms.css");
+@import url("./hero.css");
+@import url("./lists.css");
+@import url("./navBar.css");
+@import url("./sidebar.css");
+@import url("./textElements.css");
+
 *,
 ::before,
 ::after {
