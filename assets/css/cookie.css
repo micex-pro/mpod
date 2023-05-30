@@ -3,40 +3,55 @@
 
 /* Start Of Cookie Consent */
 .ca-main {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: absolute;
   width: 100%;
-  padding: 10px;
-  background-color: #f2f2f2;
-  text-align: center;
-}
-
-.ca-content {
+  max-width: 320px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.ca-content {
+  width: 90%;
+  height: 90%;
+  background-color: rgba(231, 231, 231, 0.95);
+  border: 2px solid var(--primary-500);
+  border-radius: var(--radius-half-circle);
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ca-content p a {
+  color: var(--primary-600);
+}
+.ca-content p a:hover {
+  color: var(--primary-700);
 }
 
 .ca-message {
   margin: 10px;
 }
 
-.btn-cookie {
-  margin: 10px;
-  padding: 8px 16px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  cursor: pointer;
+.ca-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.ca-settings {
-  margin: 10px;
-  text-decoration: none;
-  color: #333;
+#caDecline {
+  background-color: var(--red-mid);
 }
+#caDecline:hover {
+  background-color: var(--red-dark);
+}
+
 /* End Of Cookie Consent */
 
 /* Start Of Media Queries */
