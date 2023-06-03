@@ -1,13 +1,6 @@
 window.onload = function () {
-  // var cookieConsent = getCookie("cookieConsent");
-  // if (!cookieConsent) {
-  //   document.getElementById("cookieConsent").style.display = "block";
-  //   document
-  //     .getElementById("acceptCookies")
-  //     .addEventListener("click", acceptCookies);
-  // }
-
   let cookieConsentStatus = getCookie("cookiesConsent");
+  
   if (cookieConsentStatus == null || cookieConsentStatus[1] != 1)
   {
     createCookieConsent();
@@ -22,11 +15,7 @@ window.onload = function () {
       body.style.overflow = "visible";
       caMain.style.display = "none";
     });
-
-  }else{
-    body.style.overflow = "visible";
   }
-
 };
 
 function setCookie(name, value, days) {

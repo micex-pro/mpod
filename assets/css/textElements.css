@@ -54,6 +54,14 @@ a {
   margin-bottom: 1rem;
 }
 
+.anchor-email{
+  color: var(--primary-500);
+}
+
+.anchor-email:hover{
+  color: var(--primary-600);
+}
+
 .nav-anchor:hover {
   color: var(--primary-500);
 }

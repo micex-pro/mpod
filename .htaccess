@@ -8,6 +8,13 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Disable directory listing
 Options -Indexes
 
+# Disable access to the .git folder
+RewriteRule ^\.git/ - [F]
+
+# Disable access to the /scripts folder
+RewriteRule ^scripts/ - [F]
+
+
 # Protect .htaccess
 <Files .htaccess>
 Order Allow,Deny
@@ -24,9 +31,9 @@ Deny from all
 DirectoryIndex index.html index.php
 
 # Error Pages
-ErrorDocument 403 https://mpod.micex.pro/403.html
-ErrorDocument 404 https://mpod.micex.pro/404.html
-ErrorDocument 500 https://mpod.micex.pro/500.html
+ErrorDocument 403 https://mpod.micex.pro/errors/403.html
+ErrorDocument 404 https://mpod.micex.pro/errors/404.html
+ErrorDocument 500 https://mpod.micex.pro/errors/500.html
 
 # Block An IP Address From Accessing The Web Site
 # Order Allow, Deny
